@@ -1,0 +1,26 @@
+# Power BI temporary / local files
+*.pbi-tools
+*.pbit
+~$*
+
+# Power BI auto-recovery and backup files
+AutoRecovery/
+Backup/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Python / notebooks
+__pycache__/
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp

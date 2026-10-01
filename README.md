@@ -1,192 +1,398 @@
 # Child Fever & Care-Seeking Power BI Dashboard
 
-> An interactive Power BI dashboard exploring healthcare-seeking behavior, timeliness of care, healthcare access, caregiver knowledge, and care-seeking pathways among caregivers of children with fever / acute febrile illness (AFI).
+## 📌 Project Overview
 
-## Project Overview
+An interactive **Power BI dashboard** analyzing healthcare-seeking behavior among caregivers of children experiencing **fever and acute febrile illness (AFI)**.
 
-This project presents a **Power BI healthcare analytics dashboard** designed to understand what caregivers did when a child developed fever, how quickly care was sought, where care was obtained, and how access and caregiver knowledge relate to care-seeking timing.
+The dashboard explores caregivers' **knowledge and perceptions, healthcare access, barriers, care-seeking pathways, and the timing of healthcare-seeking**. The analysis focuses particularly on the difference between caregivers who sought care **within 24 hours** and those who sought care **after 24 hours**.
 
-The dashboard is organized around four analytical questions:
-
-1. **What did caregivers actually do when the child had fever?**
-2. **How do healthcare access factors differ by care-seeking timeliness?**
-3. **How are knowledge and perceptions related to healthcare-seeking timeliness?**
-4. **What are the overall patterns of timely and delayed care-seeking?**
-
-A separate detail page allows users to inspect the selected subgroup at record level.
+The project transforms caregiver-level data into interactive visualizations and analytical indicators to identify patterns associated with **timely and delayed healthcare-seeking**.
 
 ---
 
-## Dashboard Pages
+## 🎯 Project Objectives
 
-| Page | Purpose |
-|---|---|
-| **Executive Overview** | Summarizes first actions, facility type, referral, hospitalization, and child outcomes. |
-| **Access & Barriers** | Explores accessibility, affordability, healthcare autonomy, and transport by care-seeking time. |
-| **Knowledge & Perceptions** | Examines danger-sign knowledge, timing knowledge, fever seriousness, and fever-definition knowledge. |
-| **Care-Seeking Pathways** | Shows overall timely vs delayed care-seeking and differences by education, facility type, and first action. |
-| **Care-Seeking Details** | Provides a detailed filtered view of selected respondents and care-seeking characteristics. |
+The dashboard was developed to:
 
----
-
-## Key Findings
-
-Based on the dashboard visuals currently included in this repository:
-
-- **422 respondents** are represented in the overall dashboard view.
-- **36.5%** of respondents sought care **within 24 hours**, while **63.5%** sought care **after 24 hours**.
-- **Private clinics** were the main type of facility visited, accounting for approximately **85.06%** of facility visits shown on the Executive Overview.
-- The most common **first action** was going to a **health facility (36.97%)**, followed by a **pharmacy/drug shop (32.70%)** and **home remedy (26.78%)**. Traditional healer use was shown at **3.55%**.
-- **59%** of cases shown on the Executive Overview had a referral given, compared with **41%** without a referral.
-- The hospitalization visual shows **341 children (80.81%)** as hospitalized and **81 (19.19%)** as not hospitalized.
-- The dashboard's overall pattern indicates that **delayed care-seeking was more common than care-seeking within 24 hours** in the displayed sample.
-- The dashboard also displays differences in timely care-seeking across **education level, facility type, and first action**, which can be explored interactively using the slicers.
-
-### Interpretation note
-
-These are **descriptive dashboard findings**. They show patterns in the displayed dataset and should not be interpreted as causal relationships without appropriate statistical analysis.
+* Assess the overall pattern of **timely versus delayed care-seeking**.
+* Examine differences in care-seeking by **caregiver characteristics and education level**.
+* Explore the relationship between **healthcare access and care-seeking timeliness**.
+* Examine caregivers' **knowledge of danger signs and perceptions of fever**.
+* Compare **danger signs across timely and delayed care-seeking groups**.
+* Analyze caregivers' **first actions when a child develops fever**.
+* Examine healthcare facilities and transportation methods used.
+* Describe **referral and hospitalization patterns**.
+* Explore reported **clinical outcomes**.
 
 ---
 
-## Important Visual QA Note
+# 📊 Dashboard Structure
 
-A professional review of the current dashboard screenshots identified a calculation/denominator issue on some visuals in the **Access & Barriers** and **Knowledge & Perceptions** pages.
+The dashboard is organized into four main analytical pages.
 
-Several displayed percentages are greater than 100% (for example values such as 442.5%, 8500%, and 3300%). Percentages representing proportions should normally remain within **0–100%**.
+## 1. Executive Overview & Timeliness
 
-Before using the dashboard for a final report, publication, presentation, or portfolio, review the DAX measures behind these visuals—especially the denominator and filter context.
+This page provides an overall picture of healthcare-seeking behavior.
 
-Recommended checks:
+### Key indicators
 
-- Confirm that the percentage measure uses the intended denominator.
-- Check whether counts are being divided by a filtered subgroup count or an overall count.
-- Review `CALCULATE`, `DIVIDE`, `COUNTROWS`, `DISTINCTCOUNT`, and filter context.
-- Test each measure against a simple manual calculation.
-- Recheck the visuals after applying slicers.
+* **Total Respondents:** 422
+* **Delayed Care-Seeking:** 63.5% (268 respondents)
+* **Timely Care-Seeking:** 36.5% (154 respondents)
+* **Timely Care:** Within 24 hours
+* **Delayed Care:** After 24 hours
 
-The repository intentionally keeps the original PBIX unchanged so the dashboard can be audited and corrected separately.
+### Main analyses
 
----
-
-## Interactivity
-
-The dashboard includes interactive filters/slicers for variables such as:
-
-- Child age group
-- Gender
-- Education level
-- Facility type
-- Household type
-
-The pages are connected through Power BI interactions, allowing users to examine differences in care-seeking behavior across selected subgroups.
+* Timely vs. delayed care-seeking
+* Care-seeking by education level
+* Care-seeking by facility type
+* First action and care-seeking timeliness
+* Overall distribution of delayed care
 
 ---
 
-## Repository Structure
+## 2. Healthcare Access & Barriers
+
+This page examines factors that may influence how quickly caregivers seek healthcare.
+
+### Key areas
+
+* Physical accessibility of healthcare
+* Affordability of healthcare services
+* Household healthcare decision-making
+* Transportation methods
+* Care-seeking time
+
+### Key observation
+
+The dashboard shows different patterns of timely and delayed care-seeking according to reported **accessibility, affordability, household decision-making, and transportation**.
+
+---
+
+## 3. Knowledge, Perception & Danger Signs
+
+This page focuses on caregivers' knowledge and perceptions related to childhood fever.
+
+### Key analyses
+
+* Knowledge of childhood danger signs
+* Danger signs × care-seeking time
+* Perceived seriousness of fever
+* Preferred timing of action
+* Understanding/definition of fever
+
+### Danger Signs Analysis
+
+A key analysis compares **reported danger signs** between:
+
+* **Within 24 Hours**
+* **After 24 Hours**
+
+This allows the dashboard to examine which danger signs are more commonly represented among caregivers who sought care within 24 hours compared with those who sought care after 24 hours.
+
+### Key observation
+
+Caregivers with poorer knowledge of illness danger signs showed a greater proportion of delayed care-seeking, while recognition of danger signs and perception of fever seriousness were associated with differences in care-seeking timeliness.
+
+---
+
+## 4. Care-Seeking Pathways & Outcomes
+
+This page examines what caregivers did first, where they sought care, and what happened afterward.
+
+### First Action
+
+The reported first actions included:
+
+* Health facility — **36.97%**
+* Pharmacy/Drug shop — **32.70%**
+* Home remedies — **26.78%**
+* Traditional healer — **3.55%**
+
+### Facility Visited
+
+The most commonly reported facilities were:
+
+* Private clinics — **85.06%**
+* Public hospitals — **9.74%**
+* Health centers — **2.60%**
+* MCH centers — **2.60%**
+
+### Referral
+
+* Formal referral — **41.00%**
+* No formal referral — **59.00%**
+
+### Hospitalization
+
+* Hospitalized — **19.19% (81 children)**
+* Not hospitalized — **80.81% (341 children)**
+
+### Clinical Outcomes
+
+* Improved outcome — **63.03%**
+* Overall positive/recovery outcome pattern — **99.35%**
+
+---
+
+# 🔎 Key Findings
+
+## Overall Care-Seeking Pattern
+
+Delayed care-seeking was more common than timely care-seeking in the analyzed dataset.
+
+**63.5%** of respondents sought care **after 24 hours**, compared with **36.5%** who sought care **within 24 hours**.
+
+This indicates that the 24-hour threshold is an important analytical point for understanding healthcare-seeking behavior in this dataset.
+
+---
+
+## Education & Timeliness
+
+Care-seeking patterns differed across education levels.
+
+Caregivers with **college-level education and above** demonstrated a higher proportion of timely care-seeking compared with lower education groups, where delayed care-seeking was more prominent.
+
+---
+
+## Healthcare Access
+
+Differences were observed according to reported:
+
+* Physical accessibility
+* Affordability
+* Transportation
+* Household decision-making
+
+Caregivers reporting better physical access and more affordable services showed a greater proportion of timely care-seeking.
+
+---
+
+## Knowledge & Danger Signs
+
+Knowledge of childhood illness danger signs showed differences between timely and delayed care-seeking groups.
+
+The dashboard also directly compares individual **danger signs** with **care-seeking time**, allowing identification of patterns between danger-sign reporting and whether care was sought within or after 24 hours.
+
+---
+
+## First Action & Care-Seeking
+
+The first action taken when a child developed fever differed across care-seeking groups.
+
+Health facilities and pharmacies/drug shops represented the most common initial actions, while home remedies and traditional healers were also reported.
+
+Initial use of home remedies and traditional healers was more commonly associated with delayed care-seeking in the analyzed data.
+
+---
+
+## Care Pathways
+
+Private clinics represented the largest proportion of facilities visited.
+
+The care pathway also included pharmacies/drug shops, public hospitals, health centers, and MCH centers, demonstrating that caregivers entered and moved through the healthcare system through multiple points of care.
+
+---
+
+# 💡 Analytical Insights
+
+The dashboard provides several important analytical perspectives:
+
+### 1. Timeliness
+
+The analysis identifies the proportion of caregivers seeking care within versus after the 24-hour threshold.
+
+### 2. Knowledge
+
+It examines whether caregiver knowledge and recognition of childhood danger signs differ across care-seeking groups.
+
+### 3. Accessibility
+
+It explores how reported healthcare accessibility, affordability, and transportation relate to care-seeking patterns.
+
+### 4. Decision-Making
+
+It examines household decision-making patterns and their distribution across timely and delayed care.
+
+### 5. Care-Seeking Pathway
+
+It follows the pathway from the **first action** to the **facility visited**, referral, hospitalization, and reported outcome.
+
+---
+
+# 📈 Power BI Features Used
+
+The project demonstrates practical use of Power BI for healthcare data analysis, including:
+
+* Data cleaning and transformation using **Power Query**
+* Data modeling
+* Relationships between tables
+* DAX measures
+* Calculated columns
+* KPI cards
+* Bar charts
+* Donut/pie charts
+* Slicers
+* Filters
+* Data labels
+* Conditional formatting
+* Interactive visual analysis
+* Cross-filtering between visuals
+
+---
+
+# 🧮 Key DAX Measures
+
+Examples of measures used in the dashboard include:
+
+```DAX
+Total Respondents =
+COUNTROWS(Fact_CareSeeking)
+```
+
+```DAX
+Delayed Care =
+CALCULATE(
+    [Total Respondents],
+    Fact_CareSeeking[CareSeeking_Time] = "After 24 Hours"
+)
+```
+
+```DAX
+Timely Care =
+CALCULATE(
+    [Total Respondents],
+    Fact_CareSeeking[CareSeeking_Time] = "Within 24 Hours"
+)
+```
+
+```DAX
+Delayed Care % =
+DIVIDE(
+    [Delayed Care],
+    [Total Respondents],
+    0
+)
+```
+
+```DAX
+Timely Care % =
+DIVIDE(
+    [Timely Care],
+    [Total Respondents],
+    0
+)
+```
+
+These measures allow the dashboard to dynamically respond to slicers and filters.
+
+---
+
+# 🗂️ Project Structure
 
 ```text
-health-care-seeking-dashboard/
+Child-Fever-Care-Seeking-PowerBI/
 │
 ├── README.md
 │
-├── powerbi/
-│   └── FACT_CARE_SEEKING_PROJECT_ONE.pbix
+├── Dashboard/
+│   └── Child_Fever_Care_Seeking.pbix
 │
-├── screenshots/
-│   ├── 01_executive_overview.png
-│   ├── 02_access_and_barriers.png
-│   ├── 03_knowledge_and_perceptions.png
-│   ├── 04_care_seeking_pathways.png
-│   └── 05_care_seeking_details.png
+├── Data/
+│   └── [Dataset / Source Files]
 │
-└── docs/
-    └── KEY_FINDINGS.md
+├── Documentation/
+│   └── Key_Findings.md
+│
+└── Screenshots/
+    └── Dashboard_Pages/
 ```
 
 ---
 
-## How to Use
+# 🛠️ Tools & Technologies
 
-### Open the Power BI dashboard
-
-1. Download or clone this repository.
-2. Open:
-   `powerbi/FACT_CARE_SEEKING_PROJECT_ONE.pbix`
-3. Open the report in **Microsoft Power BI Desktop**.
-4. Use the slicers and page navigation buttons to explore the dashboard.
-5. Review the DAX measures before reusing the reported percentages in formal analysis.
-
-### GitHub
-
-The repository is structured so that:
-
-- the **PBIX file** is separated from documentation;
-- the **dashboard screenshots** are stored independently;
-- the **key findings** are documented separately;
-- the root README provides a concise project-level explanation.
+| Tool                 | Purpose                                          |
+| -------------------- | ------------------------------------------------ |
+| **Power BI Desktop** | Dashboard development and visualization          |
+| **Power Query**      | Data cleaning and transformation                 |
+| **DAX**              | Measures and analytical calculations             |
+| **Excel/CSV**        | Data source and preparation                      |
+| **GitHub**           | Project documentation and portfolio presentation |
 
 ---
 
-## Analytical Scope
+# 📌 Important Definitions
 
-The dashboard focuses on:
+### Timely Care-Seeking
 
-**Outcome / main analytical variable**
-- Care-seeking timeliness: within 24 hours vs after 24 hours.
+Care-seeking that occurred **within 24 hours**.
 
-**Care-seeking behavior**
-- First action
-- Type of facility visited
-- Referral
-- Hospitalization
-- Child outcome
+### Delayed Care-Seeking
 
-**Access and contextual factors**
-- Healthcare accessibility
-- Affordability
-- Healthcare autonomy
-- Transport mode
+Care-seeking that occurred **after 24 hours**.
 
-**Knowledge and perception factors**
-- Danger-sign knowledge
-- Timing knowledge
-- Fever seriousness
-- Fever-definition knowledge
+### Care-Seeking Time
 
-**Stratification variables**
-- Child age group
-- Gender
-- Education level
-- Household type
-- Facility type
+The time interval between recognition of the child's illness/fever and seeking healthcare.
+
+### Danger Signs
+
+Reported signs indicating potentially serious childhood illness and requiring attention in the context of the dataset.
 
 ---
 
-## Limitations
+# ⚠️ Interpretation Note
 
-- The dashboard is primarily **descriptive** and does not by itself establish statistical association or causality.
-- Some visuals require DAX/denominator validation because of percentages exceeding 100%.
-- The repository contains the Power BI report and screenshots; the underlying raw dataset is not included.
-- Findings should therefore be interpreted within the population and sampling context of the original dataset.
+The findings presented in this dashboard are **descriptive and based on the analyzed dataset**.
 
----
+Observed differences between timely and delayed care-seeking groups should not automatically be interpreted as causal relationships. The dashboard is intended to identify patterns and support further investigation.
 
-## Recommended Next Steps
-
-For a final professional version:
-
-1. Validate and correct the percentage measures exceeding 100%.
-2. Standardize visual titles and capitalization.
-3. Add a short **Data & Methods** page documenting the dataset, sample, variables, and definition of timely care-seeking.
-4. Add a **DAX Measures** documentation file if this project is being used as a Power BI portfolio project.
-5. Re-export the screenshots after the calculation fixes.
-6. If inferential analysis is required, complement the dashboard with appropriate statistical tests or regression analysis outside the dashboard.
+Percentages may vary depending on the selected filters and slicers.
 
 ---
 
-## Project Type
+# 🎯 Project Value
 
-**Tools:** Microsoft Power BI, Power Query, DAX  
-**Domain:** Public Health / Healthcare Analytics  
-**Analysis Type:** Descriptive and interactive dashboarding  
-**Primary Theme:** Child fever / acute febrile illness care-seeking behavior
+This project demonstrates the application of **Power BI, data modeling, Power Query, and DAX** to a public-health dataset.
+
+It shows how raw caregiver-level data can be transformed into an interactive analytical dashboard that communicates:
+
+* Who seeks care promptly
+* Where delays occur
+* How caregivers respond to childhood fever
+* How knowledge and perceptions differ
+* What barriers may affect timeliness
+* How caregivers navigate healthcare services
+* What outcomes are reported
+
+---
+
+# 📚 Documentation
+
+For detailed analytical findings, see:
+
+**`Documentation/Key_Findings.md`**
+
+The documentation provides a structured summary of the major findings identified across the dashboard pages.
+
+---
+
+# 👤 Project Focus
+
+**Domain:** Public Health / Healthcare Analytics
+**Topic:** Childhood Fever & Healthcare-Seeking Behavior
+**Tool:** Microsoft Power BI
+**Analysis Type:** Descriptive & Exploratory Data Analysis
+**Dashboard Focus:** Timely vs. Delayed Care-Seeking
+
+---
+
+## ⭐ Summary
+
+The **Child Fever & Care-Seeking Power BI Dashboard** provides an interactive analysis of healthcare-seeking behavior among caregivers of children with fever/acute febrile illness.
+
+The central analytical focus is the comparison between **care-seeking within 24 hours and after 24 hours**, while examining caregiver knowledge, perceptions, healthcare access, barriers, first actions, healthcare pathways, and outcomes.
+
+The project demonstrates how **data analytics and visualization can be used to identify patterns in healthcare-seeking behavior and communicate public-health findings effectively.**

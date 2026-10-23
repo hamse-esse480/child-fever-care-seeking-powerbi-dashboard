@@ -28,7 +28,7 @@ The dashboard was developed to:
 
 # 📊 Dashboard Structure
 
-The dashboard is organized into four main analytical pages.
+The report is presented through five dashboard views: Executive Overview & Timeliness, Healthcare Access & Barriers, Knowledge/Perception/Danger Signs, Care-Seeking Pathways & Outcomes, and Healthcare-Seeking Details.
 
 ## 1. Executive Overview & Timeliness
 
@@ -133,6 +133,12 @@ The most commonly reported facilities were:
 
 * Improved outcome — **63.03%**
 * Overall positive/recovery outcome pattern — **99.35%**
+
+---
+
+## 5. Healthcare-Seeking Details
+
+The Details view supports closer inspection of records and dashboard breakdowns. It should be used to explore the selected data and filters, not to infer causality or identify individuals.
 
 ---
 

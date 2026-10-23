@@ -302,7 +302,7 @@ Child-Fever-Care-Seeking-PowerBI/
 ├── Data/
 │   └── [Dataset / Source Files]
 │
-├── Documentation/
+├── docs/
 │   └── Key_Findings.md
 │
 └── Screenshots/
@@ -373,7 +373,7 @@ It shows how raw caregiver-level data can be transformed into an interactive ana
 
 For detailed analytical findings, see:
 
-**`Documentation/Key_Findings.md`**
+**`docs/Key_Findings.md`**
 
 The documentation provides a structured summary of the major findings identified across the dashboard pages.
 

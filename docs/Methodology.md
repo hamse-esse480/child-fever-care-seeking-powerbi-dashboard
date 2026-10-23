@@ -58,10 +58,15 @@ The main analytical outcome is **Care-Seeking Time**, categorized into:
 
 ## Dashboard Structure
 
+The repository contains five documented dashboard views:
+
 1. **Executive Overview & Timeliness**
 2. **Healthcare Access & Barriers**
 3. **Knowledge, Perception & Danger Signs**
 4. **Care-Seeking Pathways & Outcomes**
+5. **Healthcare-Seeking Details**
+
+The fifth view supports record/detail inspection and should be interpreted with the same descriptive limitations as the summary pages.
 
 ## Analytical Interpretation
 

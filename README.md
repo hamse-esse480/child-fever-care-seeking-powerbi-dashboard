@@ -292,22 +292,35 @@ These measures allow the dashboard to dynamically respond to slicers and filters
 # 🗂️ Project Structure
 
 ```text
-Child-Fever-Care-Seeking-PowerBI/
-│
+child-fever-care-seeking-powerbi-dashboard/
 ├── README.md
-│
-├── Dashboard/
-│   └── Child_Fever_Care_Seeking.pbix
-│
-├── Data/
-│   └── [Dataset / Source Files]
-│
+├── powerbi/
+│   └── FACT CARE SEEKING PROJ ONE.pbix
 ├── docs/
-│   └── Key_Findings.md
-│
-└── Screenshots/
-    └── Dashboard_Pages/
+│   ├── DAX_Measures.md
+│   ├── Data_Dictionary.md
+│   ├── Data_Quality.md
+│   ├── Key_Findings.md
+│   └── Methodology.md
+└── screenshots/
+    ├── Access Barriers .png
+    ├── Care sseking Pathways.png
+    ├── Heakth care over view.png
+    ├── Health care seeking Details .png
+    └── Knowledge & perception .png
 ```
+
+## 🖼️ Dashboard Screenshots
+
+Open each screenshot to preview the corresponding dashboard page:
+
+- [Executive Overview](screenshots/Heakth%20care%20over%20view.png)
+- [Healthcare Access & Barriers](screenshots/Access%20Barriers%20.png)
+- [Knowledge & Perception](screenshots/Knowledge%20%26%20perception%20.png)
+- [Care-Seeking Pathways](screenshots/Care%20sseking%20Pathways.png)
+- [Healthcare-Seeking Details](screenshots/Health%20care%20seeking%20Details%20.png)
+
+**Note:** Screenshot filenames are linked as they currently exist in the repository. They can be renamed later to remove typos and spaces, provided the README links are updated at the same time.
 
 ---
 
@@ -371,11 +384,7 @@ It shows how raw caregiver-level data can be transformed into an interactive ana
 
 # 📚 Documentation
 
-For detailed analytical findings, see:
-
-**`docs/Key_Findings.md`**
-
-The documentation provides a structured summary of the major findings identified across the dashboard pages.
+For detailed documentation, see [Key Findings](docs/Key_Findings.md), [Data Quality](docs/Data_Quality.md), [Data Dictionary](docs/Data_Dictionary.md), [Methodology](docs/Methodology.md), and [DAX Measures](docs/DAX_Measures.md). These documents summarize the analytical findings, data definitions, quality checks, methods, and calculations.
 
 ---
 
